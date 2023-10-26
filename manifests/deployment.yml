@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dbarrazapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dbarrazapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dbarrazapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dbarrazapipelinesjavascriptdocker 
+          image: acrdbarraza.azurecr.io/dbarrazapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
